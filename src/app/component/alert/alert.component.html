@@ -1,0 +1,126 @@
+<div class="row">
+  <div class="col-lg-12">
+    <!-- ==================================-->
+    <!-- ========== Basic Alert ========== -->
+    <!-- ==================================-->
+    <div class="card w-100">
+      <div class="p-3">
+        <h4 class="card-title mb-0">Alerta Básico</h4>
+      </div>
+      <div class="card-body border-top">
+        <p *ngFor="let alert of alerts">
+          <ngb-alert [type]="alert.type" [dismissible]="false" class="customize-alert fs-4">
+            {{ alert.type }} - {{ alert.message }}
+          </ngb-alert>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12">
+    <!-- ==================================-->
+    <!-- ======== Outline Alert ========= -->
+    <!-- ==================================-->
+    <div class="card">
+      <div class="p-3">
+        <h4 class="card-title mb-0">Alerta de esboço</h4>
+      </div>
+      <div class="card-body border-top">
+        <ngb-alert class="
+            bg-transparent
+            border-primary border
+            text-primary
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta de luz primária
+        </ngb-alert>
+        <ngb-alert class="
+            bg-transparent
+            border-secondary border
+            text-secondary
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta de luz secundária
+        </ngb-alert>
+        <ngb-alert class="
+            bg-transparent
+            border-success border
+            text-success
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta luminoso de sucesso
+        </ngb-alert>
+        <ngb-alert class="
+            bg-transparent
+            border-danger border
+            text-danger
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta de luz de perigo
+        </ngb-alert>
+        <ngb-alert class="
+            bg-transparent
+            border-warning border
+            text-warning
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta de luz de advertência
+        </ngb-alert>
+        <ngb-alert class="
+            bg-transparent
+            border-info border
+            text-info
+            d-flex
+            align-items-center
+            fs-5
+          ">
+
+          Um simples alerta luminoso informativo
+        </ngb-alert>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12">
+    <!-- ==================================-->
+    <!-- ======= Custom Alert ===== -->
+    <!-- ==================================-->
+    <div class="card">
+      <div class="p-3">
+        <h4 class="card-title mb-0">Alerta personalizado</h4>
+      </div>
+      <div class="card-body border-top">
+        <ngb-alert type="custom" [dismissible]="false"><strong>Uau!</strong> Este é um alerta personalizado.</ngb-alert>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="p-3">
+        <h4 class="card-title mb-0">Configuração Global de Alerta</h4>
+      </div>
+      <div class="card-body border-top">
+        <p>
+          <ngb-alert type="light-secondary" class="text-secondary font-medium fs-5">
+            O tipo deste alerta é sucesso e não pode ser descartado porque o
+            configuração foi personalizada
+          </ngb-alert>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
